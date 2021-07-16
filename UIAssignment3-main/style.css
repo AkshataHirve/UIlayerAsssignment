@@ -1,0 +1,75 @@
+/* Header*/
+.header {
+  padding: 2px;
+  text-align: left;
+  background-color: white;
+  color:black;
+  font-size: 10px;
+}
+
+
+.footer{
+  padding: 2px;
+  background-color: white;
+  color:black;
+  font-size: 10px;
+}
+
+
+
+body, html {
+  height: 100%;
+  background-color:peachpuff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* Solid border */
+hr.solid {
+  border-top: 3px solid #ffffff;
+}
+
+
+
+/* Add styles to the form container */
+.container {
+
+  position: absolute;  
+  margin: 20px;
+  max-width: 500px;
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+  input[type=text], input[type=password] ,input[type=phone] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=Phone]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: black;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+

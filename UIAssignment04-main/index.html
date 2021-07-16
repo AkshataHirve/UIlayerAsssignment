@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            display: flexbox;
+            border: solid 3px red;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="product">Product Name <br>
+        Maggi
+       </div>
+       &nbsp;&nbsp;&nbsp;&nbsp;
+       <div id="price">
+         Unit Price <br>$25.99</div>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <div id="quantity">
+         Quantity
+        </div>
+        <button onclick="onClick(event)" id="delete">-</button>
+        <span id="result">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <button onclick="onClick(event)" id="add">+</button>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,58 @@
+/* Header*/
+.header {
+  padding: 5px;
+  text-align: center;
+  background-color: navy;
+  color: white;
+  text-align:left;
+  font-size: 10px;
+}
+
+ img {
+      border-radius: 60%;
+       }
+   
+
+.col
+{
+display:table-cell;
+float: left;
+  width: 350px;
+  height: 400px;
+  padding: 16px;
+  column-gap:40px;
+  margin-top: 2px; 
+  
+    
+  
+
+}
+
+.row :after{
+    content: "";
+    display:table;
+    clear: both;
+    
+    
+}
+
+
+/* padding for container */
+.col-container {
+  display:table-cell;
+  width: 100%;
+
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+  
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
