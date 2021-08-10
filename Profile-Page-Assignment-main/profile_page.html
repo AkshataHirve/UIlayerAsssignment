@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>Profile Page</title>
+
+    <style>  
+
+       
+        
+        #logo {
+            margin-left: 100px;
+            
+            padding: 0px;
+            border-collapse: collapse;
+        }
+        .navbar{
+        overflow: hidden;
+        margin-left: 100px;       
+        }
+        .dropdown {
+        float: left;
+        overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+        font-size: 16px;  
+        border: none;
+        outline: none;
+        
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+        }
+
+        .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color:darkgrey;
+        }
+
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        }
+
+        .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        }
+
+        .dropdown-content a:hover {
+        background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+        display: block;
+        }
+        .profilebar { 
+        background-color:navy;   
+        }
+        #profileHeader {
+            color: white;
+            margin-top: 0px;
+            margin-left: 100px;            
+        }
+        .myInfo {
+            float: left;
+            background-color:white;
+            border: 1px solid black;
+            
+            width: 370px;          
+            /* padding: 20px;
+            padding-left: 100px; */
+            height: 700px;            
+            margin-left: 100px;
+        }
+        /* .abc {
+            padding-left: 50px;            
+        } */
+        .myInfo1 {
+            float: left;
+            background-color:white;
+            border:1px solid black; 
+            width: 370px;          
+            /* padding: 20px;
+            padding-left: 100px; */
+            height: 700px;            
+            margin-left: 30px;
+        }
+        .myInfo2 {
+            float: left;
+            background-color:white;
+            border:1px solid black; 
+            width: 370px;          
+            /* padding: 20px;
+            padding-left: 100px; */
+            height: 700px;            
+            margin-left: 31px;
+        }
+        #profileImg{
+            border-radius: 50%; 
+            width:100px; 
+            margin-top: -54px; 
+            margin-left: 130px; 
+            border: 1px solid grey;
+            
+        }
+        h2 {
+            color: black;
+            font-family: 'Times New Roman', Times, serif   ;
+            text-align: center;           
+        }
+        #empDetails {
+            color: black;
+            font-family: 'Times New Roman', Times, serif ;
+            font-size: 24px;
+            margin-left: 10px; 
+            
+        }
+        h3 {
+            color: black;
+            font-family: 'Times New Roman', Times, serif;
+            margin-left: 10px;   
+        }
+        *{
+            box-sizing: border-box;
+        }
+        .column {
+            float: left;
+            width: 32%;
+            padding: 20px;
+            padding-left: 100px;
+            height: 550px; 
+            border: black;
+        }
+        .row:after  {
+            content: "";
+            display: table;
+            clear: both;
+            
+        }       
+        /* h3 {
+            align-content: left;
+        } */
+        #telephoneNo{
+            margin-left: 12px;
+        }
+        #mailId{
+            margin-left: 10px;
+        }
+        #mobileNo{
+            margin-left: 10px;
+        }
+        #abtMe {
+            margin-left: 13px;
+        }
+        #mobileNo {
+            margin-left: 18px;
+        }
+        #certi {
+            margin-left: 4px;
+        }    
+        #empTable, #empTh{
+            border-collapse: collapse;
+            text-align: left;
+            margin-left: 10px;
+            width: 322px;
+
+        }   
+        #orgTable{
+            border-collapse: collapse;
+            text-align: left;
+            margin-left: 33px;
+            width: 322px;
+        }
+        .personalInfo {
+            float: left;
+            background-color:white;
+            border:1px solid black; 
+            width: 370px;          
+            /* padding: 20px;
+            padding-left: 100px; */
+            height: 500px;            
+            margin-left: 101px;
+            margin-top: 20px;
+        }
+        .personalInfo1 {
+            float: left;
+            background-color:white;
+            border:1px solid black; 
+            width: 370px;          
+            /* padding: 20px;
+            padding-left: 100px; */
+            height: 500px;            
+            margin-left: 29px;
+            margin-top: 20px;
+        }
+        .personalInfo2 {
+            float: left;
+            background-color:white;
+            border:1px solid black; 
+            width: 370px;          
+            /* padding: 20px;
+            padding-left: 100px; */
+            height: 500px;            
+            margin-left: 31px;
+            margin-top: 20px;
+        }
+        </style>  
+
+</head>
+    <body>
+        <div>
+            <div class="row">
+                <table id="logo">
+                    <thead>
+                        <th><img src="images/mastek_logo.png" width="100px",height="100px"></th>
+                        <th>
+                            <input type="search" name="srchBxTextBox" placeholder="Search" style="width: 500px;">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </th>
+                        <th style="width: 50px;" ><i class="fa fa-bell" href="#"></i></th>                
+                        <th style="width: 50px;"><i class="fa fa-calendar" href="#"></i></th>
+                        <th style="width: 50px;"><img src="images/indian_flag.jfif" width="30px",height="30px"></th>                
+                        <th style="width: 230px;"></i></th> 
+                        <th style="width: 90px;">
+                            <label>Hi,Akshata</label>
+                        </th>
+                        <th style="width: 30px;"><i class="fa fa-user"></i></th>
+                        <th style="width: 30px;"><i class="fa fa-caret-down" style="font-size:36px"></i></th>
+                    </thead>
+                </table>
+            </div>
+            <div class="navbar">
+                <div class="dropdown">
+                    <button class="dropbtn">Applications 
+                    <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                    <a href="#">My Request</a>
+                    <a href="#">My Information</a>
+                    <a href="#">My Money</a>
+                    <a href="#">Project Delivery</a>
+                    <a href="#">General Applications</a>
+                    </div>
+                </div> 
+                <div class="dropdown">
+                    <button class="dropbtn">Corporate Functions 
+                    <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                    <a href="#">Corporate Communication</a>
+                    <a href="#">Corporate Quality Management</a>
+                    <a href="#">Facilities & Logistics</a>
+                    <a href="#">Finance & Accounts</a>
+                    <a href="#">Human Resource</a>
+                    </div>
+                </div> 
+                <div class="dropdown">
+                    <button class="dropbtn">Collaboration Portals 
+                    <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                    <a href="#">DigiLearn</a>
+                    <a href="#">Information Repository</a>
+                    <a href="#">Mastek Digital Vault</a>
+                    <a href="#">Mastek Foundation</a>
+                    <a href="#">vRooms</a>
+                    </div>
+                </div> 
+                <div class="dropdown">
+                    <button class="dropbtn">External Links 
+                    <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                    <a href="#">CRM Dynamics Sales</a>
+                    <a href="#">Microsoft Teams</a>
+                    <a href="#">Outlook Email</a>
+                    <a href="#">SAP Enterprise Portal</a>
+                    <a href="#">Yammer</a>
+                    </div>
+                </div> 
+                <div class="dropdown">
+                    <button class="dropbtn">About Mastek 
+                    <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                    <a href="#">Global Presence</a>
+                    <a href="#">Mastek Zone</a>
+                    
+                    </div>
+                </div> 
+                <div class="dropdown">
+                    <button class="dropbtn">Support 
+                    <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                    <a href="#">DCT Helpdesk</a>
+                    <a href="#">HR Helpdesk-India</a>
+                    <a href="#">Finance Helpdesk-India</a>
+                    <a href="#">Facilities Helpdesk</a>
+                    <a href="#">Emergency Contacts</a>
+                
+                
+                    </div>
+                </div> 
+            </div>
+            
+            <div class="profilebar">
+                <h1 id="profileHeader">My Profile</h1>
+            </div>      
+        
+            <div class="row" style="margin-top: 100px;">
+                <div class="myInfo">
+                    <img src="images/Akshata.jpg" alt="Avatar" id="profileImg">
+                    <h2>Akshata Hirve</h2>
+                    <h4 style="text-align: center;">Trainee Software Engineer</h4>                    
+                    <div style="margin-left: 30px;">
+                        <i class="fa fa-envelope-o"></i><a href="https://outlook.com" id="mailId">Akshata.Hirve@mastek.com</a><br><br>
+                        <i class="fa fa-phone"></i><input type="text" name="telephoneNo" id="telephoneNo" placeholder="telephoneNo">  <i class="fa fa-pencil"></i><br><br>
+                        <i class="fa fa-mobile"></i><input type="text" name="mobileNo" id="mobileNo" placeholder="mobileNo">  <i class="fa fa-pencil"></i><br><br>
+                        <i class="fa fa-user"></i><label id="abtMe"><b>About Me</b></label><br><br>
+                        <textarea name="About Me" placeholder="About Me"></textarea>  <i class="fa fa-pencil"></i><br><br>
+                        
+                        <i class="fa fa-graduation-cap"></i><label id="certi"><b>Certifications</b></label><br><br>
+                        <select>
+                            <option value="Certificates">Certificates 1</option>
+                            <option value="Certificates">Certificates 2</option>
+                            <option value="Certificates">Certificates 3</option>
+                        </select><br><br>
+                        <textarea name="Certificates" placeholder="Brief About Certification"></textarea>  
+                    </div>
+                </div>
+                
+                <div class="myInfo1">
+                    <div>
+                        <p id="empDetails"><i class="fa fa-id-card-o">&nbsp</i><b>Employement Details</b></p>
+                    </div>
+                    <hr style="width:87%; margin-top: -15px;margin-left: -29px;">                  
+                 
+                    <table id="empTable">
+                        <tr><th id="empTh">Employee No.</th></tr>
+                        <tr><td >14911</td></tr>
+                        <tr>
+                            <td> <br> </td> 
+                        </tr>
+
+                        <tr><th id="empTh">Service Line.</th>
+                        <tr><td>Application Development</td></tr>
+                        <tr>
+                            <td> <br> </td> 
+                        </tr>
+
+                        <tr><th id="empTh">Unit</th></tr>
+                        <tr><td>CF-Talent Management Trainees Pool</td></tr>
+                        <tr>
+                            <td> <br> </td> 
+
+                        <tr><th id="empTh">Cost Center</th></tr>
+                        <tr><td>CF-Talent Acquisition Mgmt-Trainees-MH</td></tr>
+                        <tr>
+                            <td> <br> </td> 
+                        </tr>
+
+                        <tr><th id="empTh">Area</th></tr>
+                        <tr><td>Mumbai</td></tr>
+                        <tr>
+                            <td> <br> </td> 
+                        </tr>
+
+                        <tr><th id="empTh">Sub Area</th></tr>
+                        <tr><td>Mahape</td></tr>
+                        <tr>
+                            <td> <br> </td> 
+                        </tr>
+
+                        <tr><th id="empTh">Grade</th></tr>
+                        <tr><td>T2</td></tr>
+                        <tr>
+                            <td> <br> </td> 
+                        </tr>
+
+                        <tr><th id="empTh">Unit HR</th></tr>
+                        <tr><td>Not Available</td></tr>
+                        <tr>
+                            <td> <br> </td> 
+                        </tr>
+                        <tr><th id="empTh">Date of Joining</th></tr>
+                        <tr><td>17 May 2021</td></tr>
+                        
+                    </table>
+                </div>                
+                <div class="myInfo2">                   
+                    <div>
+                        <p id="empDetails"><i class="fa fa-sitemap">&nbsp</i><b>Organization</b></p>
+                    </div>
+                    <hr style="width:87%; margin-top: -15px;margin-left: -29px;"> 
+                    <table id="orgTable">
+                        <tr>
+                            <td>
+                                <i class="fa fa-user-circle"></i>
+                            </td>
+                            <td>
+                                Ashank Desai
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa fa-user-circle"></i>
+                            </td>
+                            <td>
+                                Maninder Kapoor Puri
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa fa-user-circle"></i>
+                            </td>
+                            <td>
+                                Girish Kulkarni
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa fa-user-circle"></i>
+                            </td>
+                            <td>
+                                Joel J. Luis
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa fa-user-circle"></i>
+                            </td>
+                            <td>
+                                Akshata Hirve
+                            </td>
+                        </tr>
+                    </table>                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="personalInfo">
+                    <div>
+                        <p id="empDetails"><i class="fa fa-info-circle">&nbsp</i><b>Personal Information</b></p>
+                    </div>
+                    <hr style="width:87%; margin-top: -15px;margin-left: -29px;"> 
+                    <table id="orgTable">
+                        <tr><th id="empTh">Gender</th></tr>
+                        <tr><td>Female</td></tr>
+                        <tr>
+                            <td> <br> </td> 
+                        </tr>
+
+                        <tr><th id="empTh">Birthday</th></tr>
+                        <tr><td>30 January</td></tr>
+                        <tr>
+                            <td> <br> </td> 
+                        </tr>
+                        
+
+                        
+                    </table>
+                    <h3>Other Details:</h3>
+            <ul>
+                <li>Passport  <i class="fa fa-plus-circle"></i></li>
+                
+                <li>Family Details  <i class="fa fa-plus-circle"></i></li>
+                
+            </ul>
+                </div>
+                <div class="personalInfo1">                   
+                    <div>
+                        <p id="empDetails"><i class="fa fa-phone-square">&nbsp</i><b>Contact Information</b></p>
+                    </div>
+                    <h3>Personal Email:</h3>
+            <input type="text" name="name" placeholder="Email-ID">  <i class="fa fa-pencil"></i>
+            <h3>Contact Number:</h3>
+            <input type="text" name="name" placeholder="Contact Number">  <i class="fa fa-pencil"></i>
+            <h3>Current Address:</h3>
+            <input type="text" name="address" placeholder="Current Address">  <i class="fa fa-pencil"></i>
+                    
+                </div>
+                <div class="personalInfo2">                   
+                    <div>
+                        <p id="empDetails"><i class="fa fa-ambulance">&nbsp</i><b>Emergency Details</b></p>
+                    </div>
+                    <h3>Blood Group:</h3>
+            <select name="Blood Group">
+                <option value="O+">O+</option>
+                <option value="O+">A+</option>
+                <option value="O+">A-</option>
+                <option value="O+">B+</option>
+                <option value="O+">B-</option>
+                <option value="O+">AB+</option>
+                <option value="O+">AB-</option>
+            </select>
+            
+            <h3>Emergency Contact Name:</h3>
+            <input type="text" name="name" placeholder="Name">  <i class="fa fa-pencil"></i>
+           
+            <h3>Emergency Contact Number:</h3>
+            <input type="text" name="name" placeholder="Number">  <i class="fa fa-pencil"></i>
+           
+                </div>
+            </div>           
+        </div>
+    </body>
